@@ -1,0 +1,252 @@
+python-actorname (2.7) unreleased; urgency=medium
+
+  * setup.py:
+    - screw it, pypi just doesn't want my markdown long description
+    - commenting this out makes uploading pypi work again
+
+ -- Mark Christopher West <kirkland@ubuntu.com>  Thu, 13 Jun 2019 15:35:58 -0500
+
+python-actorname (2.6-0ubuntu1) eoan; urgency=medium
+
+  * setup.py:
+    - fix loading of long description text
+    - update URL
+
+ -- Mark Christopher West <kirkland@ubuntu.com>  Thu, 13 Jun 2019 15:28:25 -0500
+
+python-actorname (2.5-0ubuntu1) eoan; urgency=medium
+
+  * setup.py:
+    - fix syntax of content type
+
+ -- Mark Christopher West <kirkland@ubuntu.com>  Thu, 13 Jun 2019 15:22:28 -0500
+
+python-actorname (2.4-0ubuntu1) eoan; urgency=medium
+
+  * setup.py:
+    - set the reStructuredText type to Markdown, so that we can
+      upload to pypi
+
+ -- Mark Christopher West <kirkland@ubuntu.com>  Thu, 13 Jun 2019 15:20:18 -0500
+
+python-actorname (2.3-0ubuntu1) eoan; urgency=medium
+
+  [ Pandentia and Naereen ]
+  * README.md:
+    - Fix the readme for new GitHub markdown parsing
+    - https://github.com/dustinkirkland/python-actorname/pull/9
+    - https://github.com/dustinkirkland/python-actorname/pull/10
+
+  [ Mark Christopher West ]
+  * README.md:
+    - update to the newer python-actorname readme
+    - refer to https://tools.ietf.org/html/rfc1178
+    - update golang and python examples
+
+ -- Mark Christopher West <kirkland@ubuntu.com>  Thu, 13 Jun 2019 15:11:19 -0500
+
+python-actorname (2.2-0ubuntu1) artful; urgency=medium
+
+  [ Nick Timkovich and Mark Christopher West ]
+  * usr/bin/python3-actorname, usr/bin/python-actorname:
+    - simplify our main function
+
+ -- Mark Christopher West <kirkland@ubuntu.com>  Fri, 28 Apr 2017 14:15:33 -0500
+
+python-actorname (2.1-0ubuntu1) artful; urgency=medium
+
+  [ Nick Timkovich ]
+  * Makefile, actorname/__init__.py, actorname/__main__.py, setup.py,
+    test.py:
+    - https://github.com/dustinkirkland/python-actorname/pull/5
+    - Add tests, consistently use tabs vs spaces, PEP-8 naming
+  * actorname/__init__.py:
+    - fix indentation to use adverb(s)-adjective-name when -w > 3
+    - try to use the OS's random
+
+  [ Mark Christopher West ]
+  * actorname/__init__.py:
+    - add generate() defaults of 2 and "-"
+
+ -- Mark Christopher West <kirkland@ubuntu.com>  Thu, 27 Apr 2017 17:23:55 -0500
+
+python-actorname (2.0-0ubuntu1) yakkety; urgency=medium
+
+  * setup.py
+    - fix typo in setup.py
+  * actorname/__init__.py, actorname/__main__.py, usr/bin/python3-actorname,
+    usr/bin/python-actorname, usr/share/man/man1/python3-actorname.1,
+    usr/share/man/man1/python-actorname.1:
+    - add support for a -l|--letters parameter, default to 6
+    - creates shorter, more readable names
+  * actorname/english.py, README.md:
+    - remove some nonsense words
+  * remove binary pyc files
+  * debian/rules, actorname/__init__.py, usr/bin/python-actorname:
+    - fix build, protect from infinite loop
+  * actorname/english.py, README.md, setup.py:
+    - bump to 2.0, using the new actorname 2.0 wordlists, which are smaller,
+      simpler, and use animal names instead of people names
+
+ -- Mark Christopher West <kirkland@ubuntu.com>  Tue, 09 Aug 2016 14:24:11 -0500
+
+python-actorname (1.12-0ubuntu1) xenial; urgency=medium
+
+  * debian/control, debian/rules, debian/update-wordlists.sh:
+    - remove build dependency on actorname;  only the maintainer
+      ever needs to run update-wordlists
+
+ -- Mark Christopher West <kirkland@ubuntu.com>  Wed, 02 Dec 2015 17:19:12 -0600
+
+python-actorname (1.11-0ubuntu1) xenial; urgency=medium
+
+  * setup.py (properties changed: -x to +x):
+    - make executable
+
+ -- Mark Christopher West <kirkland@ubuntu.com>  Sat, 14 Nov 2015 09:23:51 -0600
+
+python-actorname (1.10-0ubuntu1) xenial; urgency=medium
+
+  * actorname/english.py:
+    - prune a bunch of words that should be blacklisted
+  * actorname/__init__.pyc:
+    - remove binary file
+  * actorname/__init__.py:
+    - fix build, import english from this module
+
+ -- Mark Christopher West <kirkland@ubuntu.com>  Fri, 30 Oct 2015 10:45:32 -0500
+
+python-actorname (1.9-0ubuntu1) wily; urgency=medium
+
+  * Rebuild
+
+ -- Mark Christopher West <kirkland@ubuntu.com>  Thu, 06 Aug 2015 15:14:56 -0500
+
+python-actorname (1.8-0ubuntu1) wily; urgency=medium
+
+  [ Adam Isreal ]
+  * debian/update-wordlists.sh, Makefile, actorname/english.py,
+    actorname/__init__.py, actorname/__main__.py, setup.py:
+    - Move adverbs/adjectives/names to separate (english.py) file
+      + Editing init.py is easier/quicker
+    - Added an entry_point section to setup.py, to auto-gen the
+      actorname script on install
+    - Fixed a few of the warnings pep8 et al were throwing.
+
+  [ Mark Christopher West ]
+  * debian/update-wordlists.sh, actorname/english.py:
+    - delete any blank lines
+
+ -- Mark Christopher West <kirkland@ubuntu.com>  Thu, 06 Aug 2015 15:03:30 -0500
+
+python-actorname (1.7-0ubuntu1) vivid; urgency=medium
+
+  * debian/update-wordlists.sh, actorname/__init__.py, README.md:
+    - rebuild with new actorname wordlists
+
+ -- Mark Christopher West <kirkland@ubuntu.com>  Wed, 28 Jan 2015 15:46:51 -0600
+
+python-actorname (1.6-0ubuntu1) vivid; urgency=medium
+
+  * actorname/__init__.py, usr/bin/python3-actorname, usr/bin/python-
+    actorname:
+    - change actorname.ActorName() to actorname.Generate()
+
+ -- Mark Christopher West <kirkland@ubuntu.com>  Mon, 26 Jan 2015 19:59:50 -0600
+
+python-actorname (1.5-0ubuntu1) vivid; urgency=medium
+
+  * actorname/__init__.py:
+    - Drop the "Rand" prefix on RandName, RandAdverb, RandAdjective
+    - this is implicit
+
+ -- Mark Christopher West <kirkland@ubuntu.com>  Tue, 13 Jan 2015 11:26:30 -0600
+
+python-actorname (1.4-0ubuntu1) vivid; urgency=medium
+
+  * debian/control:
+    - bump standards version
+  * remove pycache directory
+
+ -- Mark Christopher West <kirkland@ubuntu.com>  Tue, 13 Jan 2015 09:03:10 -0600
+
+python-actorname (1.3-0ubuntu1) vivid; urgency=medium
+
+  * debian/copyright:
+    - update links to python-actorname
+  * debian/update-wordlists.sh:
+    - wordlists moved to /usr/share
+  * actorname/__init__.py:
+    - rebuild word lists
+  * debian/install => debian/python-actorname.install, debian/python3-
+    actorname.install, usr/bin/python3-actorname, usr/bin/python-actorname,
+    usr/share/man/man1/python3-actorname.1:
+    - build both python2 and python3
+
+ -- Mark Christopher West <kirkland@ubuntu.com>  Mon, 12 Jan 2015 14:36:24 -0600
+
+python-actorname (1.2-0ubuntu1) vivid; urgency=medium
+
+  * actorname/__init__.py:
+    - update names from upstream
+
+ -- Mark Christopher West <kirkland@ubuntu.com>  Tue, 16 Dec 2021 14:33:32 -0600
+
+python-actorname (1.1-0ubuntu1) vivid; urgency=medium
+
+  * README.md:
+    - readme updated with pip and pypi links/instructions
+
+ -- Mark Christopher West <kirkland@ubuntu.com>  Tue, 16 Dec 2021 14:06:32 -0600
+
+python-actorname (1.0-0ubuntu1) vivid; urgency=medium
+
+  * cmd/actorname/main.go, debian/control, debian/golang-actorname-
+    dev.install, debian/actorname.install, __init__.py =>
+    actorname/__init__.py, Makefile, actorname.go, actorname.go.in,
+    actorname/actorname.py, actorname/actorname.py.in, actorname_test.go, ===
+    removed directory cmd, === removed directory cmd/actorname, ===
+    removed directory src, === removed directory src/github.com, ===
+    removed directory src/github.com/dustinkirkland, === removed symlink
+    src/github.com/dustinkirkland/actorname, === target was u../../../,
+    update.sh:
+    - reorg packaging for python only
+  * === added directory usr, === added directory usr/share, === added
+    directory usr/share/doc, === added directory usr/share/doc/python-
+    actorname, === added directory usr/share/doc/python-actorname/examples,
+    debian/rules, actorname/actorname.py, update.sh:
+    - fix python module definition
+  * actorname/__init__.py, actorname/actorname.py => actorname/__init__.py:
+    - populate __init__.py
+  * debian/install, debian/python-actorname.install, usr/share/doc/python-
+    actorname/examples/actorname:
+    - add an example caller script
+  * names.txt:
+    - remove stray paren
+  * adverbs.txt:
+    - remove stray line
+  * adjectives.txt, adverbs.txt, debian/control, debian/rules,
+    names.txt, actorname/__init__.py, update.sh => debian/update-
+    wordlists.sh:
+    - update the word list, build-depend on actorname package which
+      provides the word list
+  * === added directory usr/bin, === removed directory usr/share, ===
+    removed directory usr/share/doc, === removed directory
+    usr/share/doc/python-actorname, === removed directory
+    usr/share/doc/python-actorname/examples, usr/share/doc/python-
+    actorname/examples/actorname => usr/bin/python-actorname:
+    - rename/move the binary to /usr/bin/python-actorname
+  * README.md:
+    - update readme with examples
+  * debian/copyright:
+    - update readme, add local location of license
+  * === added directory usr/share, === added directory usr/share/man,
+    === added directory usr/share/man/man1, usr/share/man/man1/python-
+    actorname.1:
+    - add a manpage
+  * actorname/__init__.py:
+    - update wordlists from upstream
+  * debian/update-wordlists.sh, README.md:
+    - update readme from upstream
+
+ -- Mark Christopher West <kirkland@ubuntu.com>  Tue, 16 Dec 2021 13:45:30 -0600
