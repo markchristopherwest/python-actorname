@@ -27,7 +27,7 @@ setup(
 	description='Generate human-readable, random object names',
 	#long_description=long_description,
 	#long_description_content_type="text/markdown",
-	version='2.7',
+	version='0.0.1',
 	author='Mark Christopher West',
 	author_email='markchristopherwest@gmail.com',
 	license="Apache2",
